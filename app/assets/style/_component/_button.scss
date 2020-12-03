@@ -1,0 +1,44 @@
+//-------
+// 按鈕
+//------
+
+// size / background /color / lh/fs
+// lg  /  211 / #F1F5F6 / #000000DE / 24/24
+// md  / 150 / #F1F5F6 / #000000DE / 24/24
+// sm  / 120 / white / 
+// xs  / 61  / #F1F5F6 / #000000DE / 24/24
+// 
+
+
+$btn-size:(
+  lg: 211,
+  md: 150,
+  sm: 120,
+  xs: 60,
+);
+
+.btn{
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 16px 0;
+    @each $name, $item in $btn-size{
+        &-#{$name}{
+            max-width: $item+px;
+        }
+    }
+    &.__center{
+        position: absolute !important;
+        top: 50%;
+        left: 50%;
+    }
+    &-white{
+        font-weight: bold;
+        border-radius: 0;
+        @include button($codeGray,$ghost,$codeGray,$ghost, 1px solid $shark);
+    }
+    &-gray{
+        border-radius: 0;
+        @include button($shark,white,$shark,white, 1px solid $shark);
+    }
+    
+}
