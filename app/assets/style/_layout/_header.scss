@@ -1,0 +1,30 @@
+header{
+    padding: 24px 48px;
+    border-bottom: 1px solid $black;
+    .container{
+        @include media-max(md){
+            padding: 0;
+        }
+    }
+    @include media-max(md){
+        padding-bottom: 0px;
+    }
+    .navbar{
+        padding: 0;
+        background: white;
+    }
+    .navbar-light .navbar-toggler{
+        border: 0;
+    }
+    .navbar-collapse{
+        
+        .nav-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $dark;
+            padding: 0.5rem 24px !important;
+            font-weight: bold;
+        }
+    }
+}

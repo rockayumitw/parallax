@@ -1,0 +1,40 @@
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        display: block;
+        position: absolute;
+        background: white;
+        &.btn-more{
+        }
+    }
+    .item-pic-box{
+        width: 960px;
+        height: 990px;
+        position: relative;
+        overflow: hidden;
+    }
+    .item-pic{
+        @each $name, $item in $pic-group  {
+            &.#{$name}{
+                background:url($item);
+                background-size: cover;
+                background-position: center center;
+                width: 100%;
+                padding-bottom: 105%;
+            }
+        }
+    }
+    .item-description{
+        margin: 0 auto;
+    }
+    .item-tool{
+        margin-bottom: 58px;
+        @include media-max(xs){
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
